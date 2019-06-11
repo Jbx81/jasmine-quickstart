@@ -13,16 +13,55 @@
             return !bool;
         }
 
-        describe('Write Your Test Group Descriptions Here', () => {
-            it('Write Your Test Expectation Here', () => {
+        const sum = (num1, num2) => {
+            return num1 + num2;
+        }
+
+        const subtract = (num1, num2) => {
+            return num1 - num2;
+        }
+
+        describe('Check that each function implements what is in its name', () => {
+          let num1;
+          let num2;
+          beforeEach(() => {
+                num1 = 1;
+                num2 = 2;
+            });
+
+            it('returns the opposite of the argument', () => {
                 // arrange
-                let bool = false;
+                let bool = true;
 
                 // act
                 const result = getOpposite(bool);
 
                 // assert
-                expect(result).toBe(true);
+                expect(result).toBe(false);
+            });
+
+            it('that sum() adds the arguments', () => {
+                // arrange
+                // let num1 = 1;
+                // let num2 = 2;
+
+                // act
+                const result = sum(num1, num2);
+
+                // assert
+                expect(result).toBe(3);
+            })
+
+            it('that subtract() subtracts the arguments', () => {
+                // arrange
+                // let num1 = 1;
+                // let num2 = 2;
+
+                // act
+                const result = subtract(num1, num2);
+
+                // assert
+                expect(result).toBe(-1);
             })
         });
     </script>
